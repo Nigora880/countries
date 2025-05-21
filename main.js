@@ -1,10 +1,15 @@
+let elCountrySelect = document.querySelector(".choose-select")
+let elCountryList = document.querySelector(".country-list")
+
 // select part start
+console.log(countries);
+
 function createOptionToSelect(){
     countries.forEach(item => {
         let elOption = document.createElement("option")
         elOption.textContent = item.capital
         elOption.value = item.capital.toLowerCase()
-        elCountrySelect.appenChild(elOption)
+        elCountrySelect.appendChild(elOption)
     })
 }
 createOptionToSelect()
@@ -31,7 +36,7 @@ function renderCountry(arr, list){
         <button class="border-[1px] border-slate-500 rounded-md w-[30%] cursor-pointer">More</button>
     </div>
         `
-        list.appenChild(elItem)
+        list.appendChild(elItem)
     })
 }
 renderCountry(countries, elCountryList)
