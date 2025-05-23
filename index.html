@@ -12,17 +12,17 @@
         <div class="containers flex justify-between">
            <h1 class="text-[24px] font-black">Where in the world?</h1>
            <div class="flex items-center gap-[20px]">
-            <button class="flex items-center gap-[5px] p-2 cursor-pointer border-[2px] border-black rounded-md">
+            <button onclick="handleBtnlIKE()" class="like-btn flex items-center gap-[5px] p-2 cursor-pointer border-[2px] border-black rounded-md">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5532 13.815C9.66857 13.815 6.51929 10.9278 6.51929 7.36821C6.51929 6.0253 6.96679 4.78158 7.73143 3.75C4.69036 4.69515 2.5 7.33122 2.5 10.4381C2.5 14.3385 5.94929 17.5 10.2036 17.5C13.5929 17.5 16.4696 15.4932 17.5 12.7045C16.375 13.4048 15.0161 13.815 13.5532 13.815Z" fill="white" stroke="#111517" stroke-width="1.25"/>
                     </svg>
-                    <span>Liked</span>
+                    <span>Liked (<span class="like-count">0</span>)</span>
             </button>
-            <button class="flex items-center gap-[5px] p-2  cursor-pointer border-black rounded-md">
+            <button onclick="handleBtnSave()" class="flex items-center gap-[5px] p-2  cursor-pointer border-black rounded-md">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5532 13.815C9.66857 13.815 6.51929 10.9278 6.51929 7.36821C6.51929 6.0253 6.96679 4.78158 7.73143 3.75C4.69036 4.69515 2.5 7.33122 2.5 10.4381C2.5 14.3385 5.94929 17.5 10.2036 17.5C13.5929 17.5 16.4696 15.4932 17.5 12.7045C16.375 13.4048 15.0161 13.815 13.5532 13.815Z" fill="white" stroke="#111517" stroke-width="1.25"/>
                     </svg>
-                    <span>Saved</span>
+                    <span>Saved (<span class="save-count">0</span>)</span>
             </button>
             <button class="flex items-center gap-[5px] p-2  cursor-pointer border-black rounded-md">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,8 +46,15 @@
         </ul>
 
       </div>
+      <div class="modal-wrapper duration-300 scale-0 fixed left-0 right-0 bottom-0 flex justify-center top-0 bg-[#000000299] backdrop-blur-[5px]" id="modal-wrapper">
+       <div class="modal-inner w-[600px] h-[300px] bg-white p-5 rounded-md m-auto">
+
+       </div>
+      </div>
     </section>
 </main>
+
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="./countries.js"></script>
     <script src="./main.js"></script>
